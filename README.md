@@ -1,5 +1,6 @@
 # Production Plan
 
+
 An example of refactoring with tests, from Martin Fowler's __Refactoring__,
 chapter 4, _Building Tests_.
 
