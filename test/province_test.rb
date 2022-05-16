@@ -24,20 +24,25 @@ class ProvinceTest < Minitest::Test
       assert_equal(292, @asia.profit)
     end
 
-    it 'Zero Demand' do
+    it "Zero Demand" do
       @asia.demand = 0
       assert_equal(-25, @asia.shortfall)
       assert_equal(0, @asia.profit)
     end
 
-    it 'Negative Demand' do 
+    it "Negative Demand" do 
       @asia.demand = -1
-      assert_equal(@asia.profit, -10)
       assert_equal(@asia.shortfall, -26)
+      assert_equal(@asia.profit, -10)
     end
 
-  end
+    # it "Empty String Demand" do 
+    #   @asia.demand = ""
+    #   assert_equal(@asia.shortfall, nil)
+    #   assert_equal(@asia.profit, nil)
+    # end
 
+  end
 
   describe 'No Producers' do
 
