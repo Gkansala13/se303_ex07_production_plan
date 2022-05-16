@@ -29,6 +29,13 @@ class ProvinceTest < Minitest::Test
       assert_equal(-25, @asia.shortfall)
       assert_equal(0, @asia.profit)
     end
+
+    it 'Negative Demand' do 
+      @asia.demand = -1
+      assert_equal(@asia.profit, -10)
+      assert_equal(@asia.shortfall, -26)
+    end
+
   end
 
 
